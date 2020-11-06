@@ -70,19 +70,19 @@ public class Round : MonoBehaviour
         }
         if (backValue == -1)
         {
-            obj.transform.Rotate(Vector3.up  * Time.deltaTime * 200, Space.World);
+            obj.transform.Rotate(Vector3.up * -1 *Time.deltaTime * 200, Space.World);
         }
         else if (backValue == 1)
         {
-            obj.transform.Rotate(Vector3.up*-1* Time.deltaTime * 200, Space.World);
+            obj.transform.Rotate(Vector3.up* Time.deltaTime * 200, Space.World);
         }
         else if (backValue == 2)
         {
-            obj.transform.Rotate(Vector3.right * -1 *Time.deltaTime * 200, Space.World);
+            obj.transform.Rotate(Vector3.right  *Time.deltaTime * 200, Space.World);
         }
         else if (backValue == -2)
         {
-            obj.transform.Rotate(Vector3.right * Time.deltaTime * 200, Space.World);
+            obj.transform.Rotate(Vector3.right *-1* Time.deltaTime * 200, Space.World);
         }
 
     }
