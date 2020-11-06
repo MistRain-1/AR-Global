@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.4.11f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +52,9 @@
     <UnityVersion>2019.4.11f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.11f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -99,18 +100,71 @@
     <Compile Include="Assets\EasyAR\Scripts\VideoRecorder.cs" />
     <Compile Include="Assets\EasyAR\Scripts\WorldRootController.cs" />
     <Compile Include="Assets\EasyAR\Scripts\csapi.cs" />
+    <Compile Include="Assets\Samples\Assets\AllSamplesLauncher\Scripts\MainScene.cs" />
+    <Compile Include="Assets\Samples\Assets\AllSamplesLauncher\Scripts\SceneRecorder.cs" />
+    <Compile Include="Assets\Samples\Assets\Common\Scripts\TouchController.cs" />
+    <Compile Include="Assets\Samples\Assets\DeviceSupport\Camera_VideoCamera\Scripts\VideoCameraSample.cs" />
+    <Compile Include="Assets\Samples\Assets\DeviceSupport\VideoRecording\Scripts\CameraRecorder.cs" />
+    <Compile Include="Assets\Samples\Assets\DeviceSupport\VideoRecording\Scripts\RecordingSample.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_CloudRecognition\Scripts\CloudRecognizerSample.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_Coloring3D\Scripts\Coloring3D.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_TargetOnTheFly\Scripts\TargetOnTheFlySample.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_Targets\Scripts\ImageTrackingSample.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_Video\Scripts\ImageTargetVideoSample.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_Video\Scripts\VideoPlayerAgent.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\MultiTarget_SameImage\Scripts\MultiTargetSameImageSample.cs" />
+    <Compile Include="Assets\Samples\Assets\ObjectSensing\ObjectTracking\Scripts\ObjectTrackingSample.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\MapBuilding_Sparse\Scripts\MapBuilding_SparseSample.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\MapBuilding_Sparse_Dense\Scripts\MapBuilding_Sparse_DenseSample.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\MapLocalizing_Sparse\Scripts\MapLocalizing_SparseSample.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\MotionTracking\Scripts\UIController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\MotionTracking_ImageTarget\Scripts\UIController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_Dense_BallGame\Scripts\UIController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\MapSession.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\Resource\MapMeta.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\Resource\MapMetaManager.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\Resource\PropCollection.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\Resource\VideoPlayerAgent.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Create\CreateViewController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Create\OneShot.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Edit\EditViewController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Edit\PropList\Dragger.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Edit\PropList\PropCellController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Edit\PropList\PropGridController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Main\MainViewController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Main\MapList\MapCellController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Main\MapList\MapDockController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\Main\MapList\MapGridController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Scripts\View\ViewManager.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SpatialMap_Sparse_ImageTarget\Scripts\SparseSpatailMapSample.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SurfaceTracking\Scripts\UIController.cs" />
+    <Compile Include="Assets\Samples\Assets\WorldSensing\SurfaceTracking_ImageTarget\Scripts\UIController.cs" />
+    <Compile Include="Assets\Script\AudioControl.cs" />
+    <Compile Include="Assets\Script\Build.cs" />
+    <Compile Include="Assets\Script\GameSetting.cs" />
     <Compile Include="Assets\Script\Gesture.cs" />
+    <Compile Include="Assets\Script\ProjectControl.cs" />
     <Compile Include="Assets\Script\Round.cs" />
     <Compile Include="Assets\Script\ScenceControl.cs" />
+    <Compile Include="Assets\Script\StopToCamera.cs" />
+    <Compile Include="Assets\Script\test.cs" />
     <None Include="Assets\EasyAR\Shaders\DenseSpatialMapMesh.shader" />
+    <None Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_Targets\Duck\README.txt" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_YUV_NV21.shader" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_BGR.shader" />
+    <None Include="Assets\Samples\Assets\WorldSensing\MotionTracking\Shaders\DrawMesh.shader" />
     <None Include="Assets\EasyAR\Shaders\DenseSpatialMapDepth.shader" />
+    <None Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Resources\MirrorTexture.shader" />
+    <None Include="Assets\Samples\Assets\DeviceSupport\VideoRecording\Shaders\RecordingWatermark.shader" />
+    <None Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_Coloring3D\Shaders\Coloring3D.shader" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_YUV_NV12.shader" />
+    <None Include="Assets\Samples\Assets\WorldSensing\SpatialMap_SparseSpatialMap\Resources\Outline\Outline.shader" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_Gray.shader" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_RGB.shader" />
+    <None Include="Assets\Samples\Assets\ObjectSensing\MultiTarget_SingleTracker\Duck\README.txt" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_YUV_I420_YV12.shader" />
     <None Include="Assets\EasyAR\Shaders\ImageTargetGizmo.shader" />
+    <None Include="Assets\Samples\Assets\ObjectSensing\ImageTracking_Video\Shaders\TransparentVideo.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -643,31 +697,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>E:/VRAR/Work2/AR-Test1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>E:/GitHub/AR-Global/AR-Test1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
