@@ -1,56 +1,56 @@
-﻿using System.Collections;
+﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine;
-
+using System.Collections;
+using System.IO;
+using UnityEngine.UI;
 public class Gesture : MonoBehaviour
 {
 
-    private Touch oldTouch1;  //上次触摸点1(手指1)
-    private Touch oldTouch2;  //上次触摸点2(手指2)
-
-    void Update()
+    WebCamTexture texture;
+    public GameObject canvas;
+    public Text text;
+    public void OnBtnCamera()
     {
-        //没有触摸，就是触摸点为0
-        if (Input.touchCount <= 0)
+
+        //Application.CaptureScreenshot(,)
+        StartCoroutine(GetTexture());
+    }
+    public IEnumerator GetTexture()
+    {
+
+        // 在截屏之前先把所有的UI无效化，这样截屏的图片就不会含有UI了
+        canvas.GetComponentInChildren<Canvas>().enabled = false;
+
+        // 等这一帧渲染结束，这样截屏时图片才不会失真或者变色
+        yield return new WaitForEndOfFrame();
+
+        Texture2D screenShot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        Rect rect = new Rect(0, 0, Screen.width, Screen.height);
+
+        screenShot.ReadPixels(rect, 0, 0, false);
+        screenShot.Apply();
+
+        byte[] bytes = screenShot.EncodeToPNG();
+        Debug.Log("1");
+        //string screenShotName = "Maballo_ss_" + System.DateTime.Now.ToString("yyyy-MM-dd-HHmmss") + ".png";
+        //File.WriteAllBytes(Application.persistentDataPath + "/" + screenShotName, screenShot.EncodeToPNG());
+
+        string destination = "/sdcard/DCIM/";
+        //判断目录是否存在，不存在则会创建目录
+        if (!Directory.Exists(destination))
         {
-            return;
+            Directory.CreateDirectory(destination);
         }
+        string path = destination + "/" + "xxylShare.PNG";
+        //存图片
+        System.IO.File.WriteAllBytes(path, screenShot.EncodeToPNG());
 
-        //多点触摸, 放大缩小
-        Touch newTouch1 = Input.GetTouch(0);
-        Touch newTouch2 = Input.GetTouch(1);
+        Debug.Log("2");
 
-        //第2点刚开始接触屏幕, 只记录，不做处理
-        if (newTouch2.phase == TouchPhase.Began)
-        {
-            oldTouch2 = newTouch2;
-            oldTouch1 = newTouch1;
-            return;
-        }
-
-        //计算旧的两点距离和新的两点间距离，变大要放大模型，变小要缩放模型
-        float oldDistance = Vector2.Distance(oldTouch1.position, oldTouch2.position);//Vector2表示2D的向量和点。
-        float newDistance = Vector2.Distance(newTouch1.position, newTouch2.position);
-
-        //两个距离之差，为正表示放大手势， 为负表示缩小手势
-        float offset = newDistance - oldDistance;
-
-        //放大因子，一个像素按 0.01倍来算(100可调整)
-        float scaleFactor = offset / 100f;
-
-        Vector3 localScale = transform.localScale;// Vector3表示3D的向量和点，Transform.localScale表示自身缩放.
-         Vector3 scale = new Vector3(localScale.x + scaleFactor,
-             localScale.y + scaleFactor,
-             localScale.z + scaleFactor);
-
-        //在什么情况下进行缩放，最小缩放到0.05倍
-        if (scale.x >= 0.05f && scale.y >= 0.05f && scale.z >= 0.05f)
-        {
-            transform.localScale = scale;
-        }
-
-        //记住最新的触摸点，下次使用
-        oldTouch1 = newTouch1;
-        oldTouch2 = newTouch2;
+        //string fileName = "Assets/UnityChanAR/" + Time.time + ".png";
+        //System.IO.File.WriteAllBytes(fileName, bytes);
+        text.text= Application.persistentDataPath + " / " + path;
+        // 在截屏之后记得把所有的UI重新有效化，这样就不会影响App运行了
+        canvas.GetComponentInChildren<Canvas>().enabled = true;
     }
 }

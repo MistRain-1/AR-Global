@@ -102,6 +102,7 @@
     <Compile Include="Assets\Script\Gesture.cs" />
     <Compile Include="Assets\Script\Round.cs" />
     <Compile Include="Assets\Script\ScenceControl.cs" />
+    <Compile Include="Assets\Script\enlarge.cs" />
     <None Include="Assets\EasyAR\Shaders\DenseSpatialMapMesh.shader" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_YUV_NV21.shader" />
     <None Include="Assets\EasyAR\Shaders\CameraImage_BGR.shader" />
