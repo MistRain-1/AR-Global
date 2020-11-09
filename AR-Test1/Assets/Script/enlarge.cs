@@ -11,7 +11,7 @@ public class enlarge : MonoBehaviour
     void Update()
     {
         //没有触摸，就是触摸点为0
-        if (Input.touchCount <= 0)
+        if (Input.touchCount !=2)
         {
             return;
         }

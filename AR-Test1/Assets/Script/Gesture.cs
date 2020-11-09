@@ -11,8 +11,6 @@ public class Gesture : MonoBehaviour
     public Text text;
     public void OnBtnCamera()
     {
-
-        //Application.CaptureScreenshot(,)
         StartCoroutine(GetTexture());
     }
     public IEnumerator GetTexture()
@@ -32,16 +30,18 @@ public class Gesture : MonoBehaviour
 
         byte[] bytes = screenShot.EncodeToPNG();
         Debug.Log("1");
+        
         //string screenShotName = "Maballo_ss_" + System.DateTime.Now.ToString("yyyy-MM-dd-HHmmss") + ".png";
         //File.WriteAllBytes(Application.persistentDataPath + "/" + screenShotName, screenShot.EncodeToPNG());
 
+        
         string destination = "/sdcard/DCIM/Camera";
         //判断目录是否存在，不存在则会创建目录
         if (!Directory.Exists(destination))
         {
             Directory.CreateDirectory(destination);
         }
-        string path = destination + "/" + "xxylShare.PNG";
+        string path = destination + "/" +"LuXun"+ System.DateTime.Now.ToString("yyyy-MM-dd-HHmmss") + ".png";
         //存图片
         System.IO.File.WriteAllBytes(path, screenShot.EncodeToPNG());
 
