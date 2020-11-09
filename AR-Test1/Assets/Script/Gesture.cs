@@ -35,7 +35,7 @@ public class Gesture : MonoBehaviour
         //File.WriteAllBytes(Application.persistentDataPath + "/" + screenShotName, screenShot.EncodeToPNG());
 
         
-        string destination = "/sdcard/DCIM/Camera";
+        string destination = "/mnt/sdcard/DCIM/Camera";
         //判断目录是否存在，不存在则会创建目录
         if (!Directory.Exists(destination))
         {

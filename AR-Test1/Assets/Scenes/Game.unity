@@ -216,6 +216,19 @@ MonoBehaviour:
   Global: {fileID: 388155710}
   Camera: {fileID: 963194225}
   Target: {fileID: 1830308423}
+--- !u!114 &162573633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162573628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045b4b8609fe5c84d86185fbc5942be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 860942183}
 --- !u!1 &176799395
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +388,6 @@ RectTransform:
   - {fileID: 1118935471}
   - {fileID: 1884961106}
   - {fileID: 860942182}
-  - {fileID: 1526898107}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -394,7 +406,6 @@ GameObject:
   m_Component:
   - component: {fileID: 245485030}
   - component: {fileID: 245485032}
-  - component: {fileID: 245485031}
   m_Layer: 0
   m_Name: Directional Light (2)
   m_TagString: Untagged
@@ -416,20 +427,6 @@ Transform:
   m_Father: {fileID: 1796205242}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &245485031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245485029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6372ac859d1e742adca6552c8edf8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 232695733}
-  text: {fileID: 860942183}
 --- !u!108 &245485032
 Light:
   m_ObjectHideFlags: 0
@@ -886,7 +883,6 @@ GameObject:
   m_Component:
   - component: {fileID: 851321016}
   - component: {fileID: 851321018}
-  - component: {fileID: 851321017}
   m_Layer: 0
   m_Name: Directional Light (1)
   m_TagString: Untagged
@@ -908,20 +904,6 @@ Transform:
   m_Father: {fileID: 1796205242}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &851321017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851321015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6372ac859d1e742adca6552c8edf8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 232695733}
-  text: {fileID: 860942183}
 --- !u!108 &851321018
 Light:
   m_ObjectHideFlags: 0
@@ -1406,7 +1388,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1013671660}
   - component: {fileID: 1013671662}
-  - component: {fileID: 1013671661}
   m_Layer: 0
   m_Name: Directional Light (5)
   m_TagString: Untagged
@@ -1428,20 +1409,6 @@ Transform:
   m_Father: {fileID: 1796205242}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1013671661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013671659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6372ac859d1e742adca6552c8edf8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 232695733}
-  text: {fileID: 860942183}
 --- !u!108 &1013671662
 Light:
   m_ObjectHideFlags: 0
@@ -1801,7 +1768,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 232695737}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 132536, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_Name
@@ -1877,15 +1844,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1893,7 +1860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1909,19 +1876,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 291.53848
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 823.219
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 600
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1941,23 +1908,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9717949
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9717949
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9717949
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22468896, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchorMin.y
@@ -2093,12 +2060,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
---- !u!224 &1526898107 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 22457152, guid: 67117722a812a2e46ab8cb8eafbf5f5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1526898106}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1561569941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,7 +2434,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1773648615}
   - component: {fileID: 1773648617}
-  - component: {fileID: 1773648616}
   m_Layer: 0
   m_Name: Directional Light (3)
   m_TagString: Untagged
@@ -2495,20 +2455,6 @@ Transform:
   m_Father: {fileID: 1796205242}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1773648616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1773648614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6372ac859d1e742adca6552c8edf8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 232695733}
-  text: {fileID: 860942183}
 --- !u!108 &1773648617
 Light:
   m_ObjectHideFlags: 0
@@ -2705,7 +2651,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1877506438}
   - component: {fileID: 1877506440}
-  - component: {fileID: 1877506439}
   m_Layer: 0
   m_Name: Directional Light (4)
   m_TagString: Untagged
@@ -2727,20 +2672,6 @@ Transform:
   m_Father: {fileID: 1796205242}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &1877506439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877506437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb6372ac859d1e742adca6552c8edf8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 232695733}
-  text: {fileID: 860942183}
 --- !u!108 &1877506440
 Light:
   m_ObjectHideFlags: 0
