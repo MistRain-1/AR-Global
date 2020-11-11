@@ -25,7 +25,8 @@ public class Build : MonoBehaviour
                  if(hit.transform.tag=="Build")
                   {
                     hit.transform.GetComponent<ProjectControl>().ShowInterface();
-                  }
+                    hit.transform.GetComponent<ProjectControl>().CloseInterface();
+                }
             }
         }
     }

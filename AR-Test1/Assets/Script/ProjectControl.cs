@@ -9,11 +9,10 @@ public class ProjectControl:MonoBehaviour
 {
     public GameObject Beforepanel;
     public GameObject AfterPanel;
-    CanvasGroup CG;
+   
     private void Start()
     {
-        CG = GetComponent<CanvasGroup>();
-        CG.alpha = 0;
+   
     }
     public void CloseInterface()
     {
@@ -25,6 +24,6 @@ public class ProjectControl:MonoBehaviour
     {
         //打开第二个界面
         AfterPanel.SetActive(true);
-        CG.alpha += Time.deltaTime;
+      
     }
 }
