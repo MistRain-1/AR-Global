@@ -224,8 +224,11 @@
     <Compile Include="Assets\Script\Picture.cs" />
     <Compile Include="Assets\Script\ProjectControl.cs" />
     <Compile Include="Assets\Script\Round.cs" />
+    <Compile Include="Assets\Script\RoundOnlyWater.cs" />
     <Compile Include="Assets\Script\ScenceControl.cs" />
+    <Compile Include="Assets\Script\St.cs" />
     <Compile Include="Assets\Script\StopToCamera.cs" />
+    <Compile Include="Assets\Script\Test1.cs" />
     <Compile Include="Assets\Script\enlarge.cs" />
     <Compile Include="Assets\Script\test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
