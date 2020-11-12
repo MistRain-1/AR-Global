@@ -70,7 +70,7 @@ public class RoundOnlyWater : MonoBehaviour
         }
         if (backValue == -1)
         {
-            obj.transform.Rotate(Vector3.up * -1 * Time.deltaTime * 200,Space.World);
+            obj.transform.Rotate(Vector3.up *-1* Time.deltaTime * 200, Space.World);//localrotation
         }
         else if (backValue == 1)
         {
