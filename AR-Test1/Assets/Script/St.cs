@@ -5,11 +5,10 @@ using UnityEngine;
 public class St : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject Camera;
+    public GameObject luxun;
     void Start()
     {
-        transform.SetParent(Camera.transform);
-        transform.position = Camera.transform.position;
+        luxun.SetActive(false);
     }
 
     // Update is called once per frame

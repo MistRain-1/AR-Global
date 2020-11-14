@@ -28,6 +28,5 @@ public class StopToCamera : MonoBehaviour
     {
         Global.transform.SetParent(Target.transform);
         Global.transform.localPosition= new Vector3(0, 0, 2);
-        
     }
 }
