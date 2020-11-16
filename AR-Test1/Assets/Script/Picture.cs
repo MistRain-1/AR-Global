@@ -13,7 +13,8 @@ public class Picture : MonoBehaviour
     {
         StartCoroutine(GetTexture());
     }
-    public IEnumerator GetTexture()
+   // public
+        IEnumerator GetTexture()
     {
 
         // 在截屏之前先把所有的UI无效化，这样截屏的图片就不会含有UI了
@@ -23,11 +24,13 @@ public class Picture : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         Texture2D screenShot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        Rect rect = new Rect(0, 0, Screen.width, Screen.height);
 
-        screenShot.ReadPixels(rect, 0, 0, false);
+       // Rect rect = new Rect(0, 0, Screen.width, Screen.height);
+
+        //screenShot.ReadPixels(rect, 0, 0, false);
+        screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
         screenShot.Apply();
-
+        
         byte[] bytes = screenShot.EncodeToPNG();
         Debug.Log("1");
         
