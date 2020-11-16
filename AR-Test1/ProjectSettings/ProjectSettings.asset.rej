@@ -1,0 +1,9 @@
+diff a/AR-Test1/ProjectSettings/ProjectSettings.asset b/AR-Test1/ProjectSettings/ProjectSettings.asset	(rejected hunks)
+@@ -123,7 +123,6 @@
+   stadiaTargetFramerate: 0
+   vulkanNumSwapchainBuffers: 3
+   vulkanEnableSetSRGBWrite: 0
+-  vulkanEnableLateAcquireNextImage: 0
+   vulkanEnableLateAcquireNextImage: 1
+   useSecurityBuild: 0
+   m_SupportedAspectRatios:

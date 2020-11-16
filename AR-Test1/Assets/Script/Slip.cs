@@ -15,10 +15,12 @@ public class Slip : MonoBehaviour
     public int speed;
     public string juge;
     private Vector2 vector2;
+  
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -44,7 +46,7 @@ public class Slip : MonoBehaviour
         }
     }
 
-
+  
     void OnGUI()   // 滑动方法02
     {
         if (Event.current.type == EventType.MouseDown)
@@ -118,6 +120,7 @@ public class Slip : MonoBehaviour
                 timer = 0;
                 touchFirst = touchSecond;
             }
+            
             if (Event.current.type == EventType.MouseUp)
             {//滑动结束  
                 currentVector = slideVector.nullVector;
